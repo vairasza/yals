@@ -1,0 +1,22 @@
+<language id="yals" name="yals" version="2.0" _section="Other">
+  <metadata>
+    <property name="mimetypes">text/txt</property>
+    <property name="globs">*.yals</property>
+  </metadata>
+
+  <styles>
+    <style id="error-character" name="Error Character" map-to="def:type"/>
+  </styles>
+
+  <definitions>
+    <context id="error-character" style-ref="error-character">
+      <match extended="true">字</match>
+    </context>
+
+	<context id="yals" class="no-spell-check">
+      <include>
+        <context ref="error-character"/>
+      </include>
+    </context>
+  </definitions>
+</language>
